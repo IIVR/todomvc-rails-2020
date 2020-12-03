@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :todos, except: [:index, :new, :edit] do
     collection do
       # ADD something here
+      patch 'toggle_all'
       delete 'clear_completed'
     end
   end
